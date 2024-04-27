@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi</title>
+    <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+</head>
+<body>
+  <div class="login">
+    <h1>Введите телефон и имя</h1>
+      {% csrf_token %}
+    <form name="autorize" method="post" action="">
+      <p><input type="text" name="phone" required="" placeholder="Телефон"></p>
+      <p><input type="text" name="name" required="" placeholder="Имя"></p>
+
+      <p class="submit"><input type="submit" name="commit" value="Отправить"></p>
+    </form>
+  </div>
+</body>
+</html>
